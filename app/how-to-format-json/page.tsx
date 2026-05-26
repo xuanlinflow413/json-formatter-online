@@ -41,9 +41,27 @@ const faqs = [
   },
 ];
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: f.a,
+    },
+  })),
+};
+
 export default function HowToFormatJsonPage() {
   return (
-    <div className="min-h-screen" style={{ background: "var(--background)" }}>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <div className="min-h-screen" style={{ background: "var(--background)" }}>
       <div className="max-w-3xl mx-auto px-4 py-12">
         {/* Breadcrumb */}
         <nav className="mb-6">
@@ -347,5 +365,6 @@ jq --indent 4 . data.json`}</code>
         </div>
       </div>
     </div>
+    </>
   );
 }
