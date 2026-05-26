@@ -17,6 +17,14 @@ A fast, privacy-first online JSON formatter, validator, and minifier. All proces
 - **Dark / Light Mode** — Toggle themes, preference saved locally
 - **Privacy First** — No server, no database, no data collection
 
+## SEO Content Guides
+
+In-depth guides for working with JSON:
+
+- [How to Format JSON](https://json-formatter-online.pages.dev/how-to-format-json/) — Complete guide for formatting JSON manually and online
+- [JSON Validator Guide](https://json-formatter-online.pages.dev/json-validator-guide/) — Syntax rules, common errors, and validation in multiple languages
+- [Fix Invalid JSON](https://json-formatter-online.pages.dev/fix-invalid-json/) — Step-by-step solutions for the 8 most common JSON errors
+
 ## Tech Stack
 
 - [Next.js 14](https://nextjs.org/) — React framework with static export

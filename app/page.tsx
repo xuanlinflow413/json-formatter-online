@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useCallback } from "react";
+import Link from "next/link";
 import Header from "@/components/Header";
 import JsonEditor from "@/components/JsonEditor";
 import JsonOutput from "@/components/JsonOutput";
@@ -9,6 +10,7 @@ import FeatureCards from "@/components/FeatureCards";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 import { formatJson, minifyJson, validateJson, SAMPLE_JSON } from "@/lib/jsonUtils";
+import { BookOpen, Wrench, CheckCircle } from "lucide-react";
 
 export default function Home() {
   const [input, setInput] = useState("");
@@ -130,6 +132,58 @@ export default function Home() {
         </section>
 
         <FeatureCards />
+
+        {/* Guides Section */}
+        <section className="py-12" style={{ background: "var(--surface)" }}>
+          <div className="max-w-6xl mx-auto px-4">
+            <h2 className="text-2xl font-bold text-center mb-2">JSON Guides</h2>
+            <p className="text-center mb-8" style={{ color: "var(--muted)" }}>
+              Learn how to work with JSON from the basics to advanced topics.
+            </p>
+            <div className="grid md:grid-cols-3 gap-6">
+              <Link
+                href="/how-to-format-json/"
+                className="group rounded-xl p-6 transition-all hover:shadow-lg"
+                style={{ background: "var(--background)", border: "1px solid var(--border)" }}
+              >
+                <BookOpen className="w-8 h-8 mb-4" style={{ color: "var(--primary)" }} />
+                <h3 className="font-semibold text-lg mb-2 group-hover:underline">
+                  How to Format JSON
+                </h3>
+                <p className="text-sm" style={{ color: "var(--muted)" }}>
+                  A complete guide to formatting JSON manually and online. Covers JavaScript, Python, CLI tools, and common mistakes.
+                </p>
+              </Link>
+              <Link
+                href="/json-validator-guide/"
+                className="group rounded-xl p-6 transition-all hover:shadow-lg"
+                style={{ background: "var(--background)", border: "1px solid var(--border)" }}
+              >
+                <CheckCircle className="w-8 h-8 mb-4" style={{ color: "var(--primary)" }} />
+                <h3 className="font-semibold text-lg mb-2 group-hover:underline">
+                  JSON Validator Guide
+                </h3>
+                <p className="text-sm" style={{ color: "var(--muted)" }}>
+                  Learn JSON validation syntax rules, common errors, and how to validate JSON in JavaScript, Python, Go, and more.
+                </p>
+              </Link>
+              <Link
+                href="/fix-invalid-json/"
+                className="group rounded-xl p-6 transition-all hover:shadow-lg"
+                style={{ background: "var(--background)", border: "1px solid var(--border)" }}
+              >
+                <Wrench className="w-8 h-8 mb-4" style={{ color: "var(--primary)" }} />
+                <h3 className="font-semibold text-lg mb-2 group-hover:underline">
+                  Fix Invalid JSON
+                </h3>
+                <p className="text-sm" style={{ color: "var(--muted)" }}>
+                  Step-by-step solutions for the 8 most common JSON errors. Fix trailing commas, single quotes, unquoted keys, and more.
+                </p>
+              </Link>
+            </div>
+          </div>
+        </section>
+
         <FAQ />
       </main>
 
