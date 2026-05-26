@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# JSON Formatter Online
 
-## Getting Started
+[![Live Site](https://img.shields.io/badge/Live-json--formatter--online.pages.dev-blue)](https://json-formatter-online.pages.dev)
+[![Next.js](https://img.shields.io/badge/Built%20with-Next.js%2014-black?logo=next.js)](https://nextjs.org/)
+[![Cloudflare Pages](https://img.shields.io/badge/Deployed%20on-Cloudflare%20Pages-orange?logo=cloudflare)](https://pages.cloudflare.com/)
 
-First, run the development server:
+A fast, privacy-first online JSON formatter, validator, and minifier. All processing happens in your browser — your data is never uploaded.
+
+## Features
+
+- **Format / Beautify** — Pretty-print JSON with 2-space indentation
+- **Validate** — Instant syntax error detection with clear messages
+- **Minify** — Remove whitespace to compress JSON
+- **Copy** — One-click copy result to clipboard
+- **Download** — Save formatted JSON as `.json` file
+- **Sample JSON** — Load example data with one click
+- **Dark / Light Mode** — Toggle themes, preference saved locally
+- **Privacy First** — No server, no database, no data collection
+
+## Tech Stack
+
+- [Next.js 14](https://nextjs.org/) — React framework with static export
+- [Tailwind CSS](https://tailwindcss.com/) — Utility-first CSS
+- [Lucide React](https://lucide.dev/) — Icon library
+- [Cloudflare Pages](https://pages.cloudflare.com/) — Static site hosting
+
+## Local Development
 
 ```bash
+# Clone the repository
+git clone https://github.com/xuanlinflow413/json-formatter-online.git
+cd json-formatter-online
+
+# Install dependencies
+npm install
+
+# Start the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Open http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Build
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The static site is generated in the `out/` directory.
 
-## Learn More
+## Deploy
 
-To learn more about Next.js, take a look at the following resources:
+Deployed on **Cloudflare Pages** with the following settings:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Setting | Value |
+|---------|-------|
+| Framework preset | Next.js (Static HTML Export) |
+| Build command | `npm run build` |
+| Build output directory | `out` |
+| Production branch | `main` |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## License
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT © 2025 JSON Formatter Online
