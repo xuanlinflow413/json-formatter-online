@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://json-formatter-online.pages.dev/sitemap.xml
